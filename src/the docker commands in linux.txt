@@ -1,0 +1,21 @@
+//install docker
+	1. rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+	yum -y install docker-io
+	
+//use aliyun to expedite docker images download
+	2.sudo mkdir -p /etc/docker
+	sudo tee /etc/docker/daemon.json <<-'EOF'
+	{
+ 	 "registry-mirrors": ["https://6yslfexv.mirror.aliyuncs.com"]
+	}
+	EOF
+	sudo systemctl daemon-reload
+	sudo systemctl restart docker
+	
+	//these code just copy to linux console it can be work
+	
+//pull docker images and watch all docker images
+	3. docker pull centos
+	    docker images
+	    
+//run a docker image

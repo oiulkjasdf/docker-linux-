@@ -1,0 +1,6 @@
+docker 
+1.like vm
+2.fast than vm 
+3.linux
+4.diffrent like vm
+5.easy to deploy project because we do not need to build environment
