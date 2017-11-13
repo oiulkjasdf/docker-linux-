@@ -18,9 +18,9 @@
 	3. docker pull centos
 	    docker images
 	    
-//run a docker image  //ip  
+//run a docker image
 
-docker run -p ip(local):hostPort:containerPort -p centos
+docker run -p ip(local):hostPort:containerPort centos
 
 //list of container
 docker ps 
