@@ -18,4 +18,39 @@
 	3. docker pull centos
 	    docker images
 	    
-//run a docker image
+//run a docker image  //ip  
+
+docker run -p ip(local):hostPort:containerPort -p centos
+
+//list of container
+docker ps 
+
+//Entering container 
+docker exec -it c1dffb00aaf7
+
+//exit docker and close container
+ctrl+d
+
+//docker restart c1dffb00aaf7
+restart container 
+
+//view container ip
+docker inspect c1dffb00aaf7 | grep IPAddress
+
+//mapping local port to container port
+iptables -t nat -A  DOCKER -p tcp --dport 8080 -j DNAT --to-destination 172.17.0.3:8080
+
+//export docker container to docker image
+docker export c1dffb00aaf7>tomcat.tar
+
+//import docker image
+cat tomcat.tar | docker import - test/tomcat
+docker import http://example.com/exampleimage.tgz registry.intra.weibo.com/yushuang3/centos:v2.0
+
+//rm docker container
+docker rm container_name
+
+//rm docker image
+docker rmi image 
+
+
